@@ -1,0 +1,14 @@
+# Mac OSX
+.DS_Store
+
+# binary file
+*.out
+
+# debug file
+a.out.dSYM
+
+# test file
+ans
+in
+out
+test.*
