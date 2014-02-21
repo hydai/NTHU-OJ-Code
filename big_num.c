@@ -4,9 +4,18 @@
 
 #define MAX_LENGTH 100000
 
-int a[MAX_LENGTH], b[MAX_LENGTH];
+char input[MAX_LENGTH];
+int ans[MAX_LENGTH];
 
-void pr_int(int *ans)
+void to_int()
+{
+    int i;
+    for (i = strlen(input); i > 0; i--) {
+        ans[i-1] = input[strlen(input)-i] - '0';
+    }
+}
+
+void pr_int()
 {
     int i, flag = 1;
     for (i = MAX_LENGTH-1; i >= 0; i--) {
@@ -23,19 +32,11 @@ void pr_int(int *ans)
     printf("\n");
 }
 
-void fibonacci(int n)
-{
-    for (i = 0; i < 10; i++) {
-        /* code */
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    int n;
-    while (~scanf("%d", &n)) {
+    while (~scanf("%s", input)) {
         memset(ans, 0, sizeof(ans));
-        fibonacci(n);
+        to_int();
         pr_int();
     }
     return 0;

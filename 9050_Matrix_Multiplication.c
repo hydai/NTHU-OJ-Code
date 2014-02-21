@@ -2,7 +2,7 @@
 #define SIZE 105
 int main(int argc, char *argv[])
 {
-    int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];
+    long long int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];
     int m, n, p, t;
     int i, j, k;
     scanf("%d", &t);
@@ -10,12 +10,12 @@ int main(int argc, char *argv[])
         scanf("%d%d%d", &m, &n, &p);
         for (i = 0; i < m; i++) {
             for (j = 0; j < n; j++) {
-                scanf("%d", &A[i][j]);
+                scanf("%lld", &A[i][j]);
             }
         }
         for (i = 0; i < n; i++) {
             for (j = 0; j < p; j++) {
-                scanf("%d", &B[i][j]);
+                scanf("%lld", &B[i][j]);
             }
         }
         for (i = 0; i < m; i++) {
@@ -27,9 +27,9 @@ int main(int argc, char *argv[])
             }
         }
         for (i = 0; i < m; i++) {
-            printf("%d", C[i][0]);
+            printf("%lld", C[i][0]);
             for (j = 1; j < p; j++) {
-                printf(" %d", C[i][j]);
+                printf(" %lld", C[i][j]);
             }
             putchar(10);
         }

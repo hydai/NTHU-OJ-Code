@@ -1,18 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
-#define MAX 10050
-
-int arr[MAX];
 
 int main(int argc, char *argv[])
 {
-    int t, len, n, i, time, half, max, min, tmp;
-
+    int t, len, n, i, half, max, min, tmp;
     scanf("%d", &t);
     while (t--) {
-        memset(arr, 0, sizeof(arr));
         scanf("%d%d", &len, &n);
         max = 0;
         min = 0;
