@@ -6,7 +6,7 @@ char s[10];
 list<int> head, tail;
 int num, headct = 0, tailct = 0;
 void adjust(){
-	while((headct + tailct) && headct > tailct){
+	while((headct + tailct) && headct > (headct + tailct)/2){
 		headct--, tailct++;
 		tail.push_front(head.back());
 		head.pop_back();
@@ -46,6 +46,7 @@ int main(){
 			else
 				temp = head, head = tail, tail = temp;
 		}
+        printf("op = %s headct= %d,tailct= %d\n", s, headct, tailct);
 	}
 	return 0;
 }

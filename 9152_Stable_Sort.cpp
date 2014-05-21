@@ -3,18 +3,16 @@
 #include <vector>
 using namespace std;
 struct Name {
-    char name[10];
+    char name[15];
 };
 
 int main(int argc, char *argv[])
 {
-    int T;
-    scanf("%d", &T);
-    while (T--) {
-        int n, score;
+    int n;
+    while (~scanf("%d", &n)) {
+        int score;
         vector<Name> V[101];
         Name tmp;
-        scanf("%d", &n);
         for (int i = 0; i < n; i++) {
             scanf("%s%d", tmp.name, &score);
             V[score].push_back(tmp);

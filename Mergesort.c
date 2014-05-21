@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void MergeSort(int a[],int n);
 void Merge(int a[],int left[],int right[],int x,int y);
